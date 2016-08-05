@@ -43,6 +43,7 @@ namespace DynamicXml
                 if (stringVal is string && intVal is int)
                 {
                     IEnumerable<XElement> xElements = _element.Elements();
+                    //What if xElements is empty?
                     result = new DynamicXElement(xElements.ElementAt((int) intVal));
                     return true;
                 }

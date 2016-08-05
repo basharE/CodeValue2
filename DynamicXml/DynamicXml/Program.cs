@@ -7,6 +7,7 @@ namespace DynamicXml
     {
         static void Main()
         {
+            //App crashes sinc file is not present on my pc and you did not catch exceptions
             dynamic planets = DynamicXElement.Create(XElement.Load("planets.xml"));
             var mercury = planets.Planet;
             Console.WriteLine(mercury);

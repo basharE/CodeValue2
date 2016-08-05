@@ -6,7 +6,7 @@ namespace FileFinder
 {
     class Program
     {
-        static void Main()
+        static void Main()//I think this method is missing something..
         {
             Console.WriteLine("please enter path : ");
             string inputPath = Console.ReadLine();
@@ -23,6 +23,7 @@ namespace FileFinder
 
         public static List<string> FindFile(string dirPath, string inputString)
         {
+            //Bug: What about non txt files?
             List<string> filePaths = new List<string>(Directory.GetFiles(@dirPath, "*.txt"));
             List<string> fileContains = new List<string>();
 
@@ -36,7 +37,7 @@ namespace FileFinder
                     {                        
                         fileContains.Add(fileString);
                     }
-                    sr.Close();
+                    sr.Close();//Redundant, since reader will be closed when the using statement goes out of scope.. 
                 }
                                
             } 

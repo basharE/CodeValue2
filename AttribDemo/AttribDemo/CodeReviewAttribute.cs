@@ -2,6 +2,8 @@
 
 namespace AttribDemo
 {
+    //It is very likely that a class will be decorated by more than one of these, yet your implementation does not allow it
+    //Consider: [AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct, AllowMultiple = true)]   
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct)]   
     public sealed class CodeReviewAttribute: Attribute
     {

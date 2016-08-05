@@ -163,7 +163,7 @@ namespace Rationals
 
         public static implicit operator double(Rational r)
         {
-            return (double)r._numerator/r._denominator;
+            return (double)r._numerator/r._denominator;//not handling DivideByZeroException
         }
 
         public static implicit operator Rational(int n)
